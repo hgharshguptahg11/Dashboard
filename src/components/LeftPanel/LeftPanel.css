@@ -1,16 +1,18 @@
 /* LeftPanel Styles */
 .leftPanel {
-  width: 280px;
-  height: 100vh;
+  width: 212px;
+  height: 1206px;
   background-color: #ffffff;
   border-right: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .userProfileSection {
-  padding: 16px;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 4px 86px 4px 4px;
+  margin: 20px  16px 16px 16px;
+  flex-shrink: 0;
 }
 
 .userProfileContainer {
@@ -31,25 +33,58 @@
 }
 
 .userProfileName {
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: #333;
+  width: 58px;
+  height: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C1C1C;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
 .navigationContent {
   flex: 1;
-  overflow: auto;
 }
 
 .sectionContainer {
-  padding: 8px 16px;
+  margin: 0px 16px 16px 16px;
+  width: 180px;
+  height: 104px;
+}
+
+.sectionTitleText {
+  margin: 4px 8px
 }
 
 .sectionTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 180px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
   color: #666;
-  font-weight: 500;
-  font-size: 0.75rem;
-  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
