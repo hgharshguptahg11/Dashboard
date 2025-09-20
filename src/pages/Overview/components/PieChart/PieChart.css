@@ -82,11 +82,11 @@
 
 /* SVG */
 .pie-chart-svg {
-  width: 154px;
-  height: 154px;
+  width: 120px;
+  height: 120px;
   flex: none;
   order: 0;
-  align-self: stretch;
+  align-self: center;
   flex-grow: 0;
 }
 
@@ -106,24 +106,6 @@
 .pie-segment.hovered {
   filter: brightness(1.2);
   stroke-width: 3;
-}
-
-/* Center Percentage */
-.center-percentage {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
-  color: #1c1c1c;
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
-
-/* Dark Theme Center Percentage */
-.pie-chart.dark .center-percentage {
-  color: #ffffff;
 }
 
 /* Legend */
