@@ -1,0 +1,442 @@
+/* BarChart Component Styles */
+
+/* Main Container */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  width: 432px;
+  min-width: 400px;
+  height: 252px;
+  background: #f7f9fb;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+.bar-chart.dark {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Chart Title */
+.chart-title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Chart Title */
+.bar-chart.dark .chart-title {
+  color: #ffffff;
+}
+
+/* Chart Container */
+.chart-container {
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Chart */
+.chart {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 384px;
+  height: 168px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Left Text (Y-axis labels) */
+.left-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px;
+  width: 26px;
+  height: 168px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Y-axis Label */
+.y-axis-label {
+  width: 26px;
+  height: 42px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: rgba(28, 28, 28, 0.4);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Dark Theme Y-axis Label */
+.bar-chart.dark .y-axis-label {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Chart Frame */
+.chart-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+  width: 342px;
+  height: 168px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Chart Lines */
+.chart-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0px 28px;
+  gap: 8px;
+  width: 342px;
+  height: 168px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  z-index: 0;
+}
+
+/* Chart Line */
+.chart-line {
+  margin: 0 auto;
+  width: 342px;
+  height: 0px;
+  border: 1px solid rgba(28, 28, 28, 0.05);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Bottom Line (stronger) */
+.chart-line.bottom-line {
+  border: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+/* Dark Theme Chart Lines */
+.bar-chart.dark .chart-line {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bar-chart.dark .chart-line.bottom-line {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom Labels (X-axis) */
+.bottom-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  height: 18px;
+  left: 0%;
+  right: 0%;
+  bottom: 0px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+/* X-axis Label */
+.x-axis-label {
+  width: 57px;
+  height: 18px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: rgba(28, 28, 28, 0.4);
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* Dark Theme X-axis Label */
+.bar-chart.dark .x-axis-label {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Vertical Bars */
+.vertical-bars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 0px 28px;
+  gap: 8px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+/* Bar Container */
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 16px 0px;
+  width: 57px;
+  height: 140px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bar-container:hover {
+  transform: translateY(-2px);
+}
+
+/* Bar Frame */
+.bar-frame {
+  width: 25px;
+  height: 100%;
+  position: relative;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Bar (background) */
+.bar {
+  position: absolute;
+  width: 20px;
+  left: calc(50% - 20px / 2 + 0.5px);
+  top: 0%;
+  bottom: 0%;
+  background: #a8c5da;
+  opacity: 0.5;
+  border-radius: 4px 4px 0px 0px;
+  transition: all 0.3s ease;
+}
+
+/* Bar Fill (foreground) */
+.bar-fill {
+  position: absolute;
+  width: 20px;
+  left: calc(50% - 20px / 2 + 0.5px);
+  top: 20%;
+  bottom: 0%;
+  background: #a8c5da;
+  border-radius: 4px 4px 0px 0px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.bar-container:hover .bar,
+.bar-container:hover .bar-fill {
+  background: #7ba7c7;
+  opacity: 1;
+}
+
+.bar.hovered,
+.bar-fill.hovered {
+  background: #5a9bc4;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animation for bars */
+.bar,
+.bar-fill {
+  animation: growUp 0.8s ease-out;
+}
+
+.bar-container:nth-child(1) .bar,
+.bar-container:nth-child(1) .bar-fill {
+  animation-delay: 0.1s;
+}
+
+.bar-container:nth-child(2) .bar,
+.bar-container:nth-child(2) .bar-fill {
+  animation-delay: 0.2s;
+}
+
+.bar-container:nth-child(3) .bar,
+.bar-container:nth-child(3) .bar-fill {
+  animation-delay: 0.3s;
+}
+
+.bar-container:nth-child(4) .bar,
+.bar-container:nth-child(4) .bar-fill {
+  animation-delay: 0.4s;
+}
+
+.bar-container:nth-child(5) .bar,
+.bar-container:nth-child(5) .bar-fill {
+  animation-delay: 0.5s;
+}
+
+.bar-container:nth-child(6) .bar,
+.bar-container:nth-child(6) .bar-fill {
+  animation-delay: 0.6s;
+}
+
+@keyframes growUp {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--target-height, 100%);
+    opacity: 1;
+  }
+}
+
+/* Tooltip for hover */
+.bar-container::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.bar-chart.dark .bar-container::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+}
+
+.bar-container:hover::after {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bar-chart {
+    width: 100%;
+    min-width: auto;
+    padding: 16px;
+  }
+
+  .chart {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .chart-frame {
+    width: 100%;
+  }
+
+  .chart-lines {
+    width: 100%;
+  }
+
+  .vertical-bars {
+    gap: 4px;
+  }
+
+  .bar-container {
+    width: 40px;
+    padding: 0px 8px 0px;
+  }
+
+  .bar,
+  .bar-fill {
+    width: 16px;
+  }
+}
+
+/* Focus styles for accessibility */
+.bar-container:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.bar-chart.dark .bar-container:focus {
+  outline-color: #0a84ff;
+}
+
+/* Loading state */
+.bar-chart.loading .bar,
+.bar-chart.loading .bar-fill {
+  background: linear-gradient(
+    90deg,
+    rgba(168, 197, 218, 0.3) 25%,
+    rgba(168, 197, 218, 0.6) 50%,
+    rgba(168, 197, 218, 0.3) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

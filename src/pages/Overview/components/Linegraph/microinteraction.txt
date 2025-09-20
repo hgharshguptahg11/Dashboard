@@ -1,0 +1,1 @@
+the line graph has name of months on x axis make diffrent curves for each month.

@@ -1,13 +1,14 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-import Overview from '../../pages/Overview';
+import React from "react";
+import { Box } from "@mui/material";
+import Overview from "../../pages/Overview";
+import Header from "../Header";
 
 // Import page components
 
 const RightPanel = ({ selectedPage }) => {
   const renderPage = () => {
     switch (selectedPage) {
-      case 'overview':
+      case "overview":
         return <Overview />;
       default:
         return <Overview />;
@@ -18,13 +19,15 @@ const RightPanel = ({ selectedPage }) => {
     <Box
       sx={{
         flex: 1,
-        height: '100vh',
-        backgroundColor: '#fafafa',
-        overflow: 'auto',
-        p: 3
+        height: "100vh",
+        backgroundColor: "#fafafa",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      {renderPage()}
+      <Header />
+      <Box sx={{ flex: 1, overflow: "auto" }}>{renderPage()}</Box>
     </Box>
   );
 };

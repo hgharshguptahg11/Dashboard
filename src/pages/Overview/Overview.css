@@ -1,0 +1,122 @@
+/* Overview Page Styles */
+
+.overview-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.overview-page.dark {
+  background: #1a1a1a;
+}
+
+/* Overview Header */
+.overview-header {
+  padding: 20px 28px;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+}
+
+.overview-page.dark .overview-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overview-title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1c1c1c;
+  margin: 0;
+}
+
+.overview-page.dark .overview-title {
+  color: #ffffff;
+}
+
+/* Overview Main */
+.overview-main {
+  flex: 1;
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: calc(100% - 280px); /* Subtract RightBar width */
+}
+
+/* Overview Content */
+.overview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 28px;
+  width: 100%;
+  min-height: 970px;
+  flex: 1;
+}
+
+/* Overview Rows */
+.overview-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 28px;
+  width: 100%;
+  flex: none;
+}
+
+/* First Row: StatBlocks and BarChart */
+.first-row {
+  height: auto;
+}
+
+/* Second Row: Linegraph and GeographyChart */
+.second-row {
+  height: auto;
+}
+
+/* Third Row: TrendingTable and PieChart */
+.third-row {
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .overview-content {
+    width: calc(100% - 280px);
+    max-width: calc(100% - 280px);
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-header {
+    padding: 16px 20px;
+    width: 100%;
+  }
+
+  .overview-main {
+    padding: 16px 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .overview-content {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .overview-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

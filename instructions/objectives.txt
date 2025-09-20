@@ -1,0 +1,20 @@
+Your task is to implement the provided SaaS dashboard designs in React with pixel-perfect accuracy. You are expected to add meaningful motion and microinteractions to enhance the user experience.
+
+Use React with modern JavaScript (ES6+), HTML5, and CSS3. You may use any UI library (e.g., Material-UI, Ant Design) but ensure the final output aligns with the provided designs.
+Follow best practices for code quality, including proper structuring, modularity, readability, and documentation.
+Ensure that the implementation works correctly across major browsers (Chrome, Firefox, Safari, Edge).
+
+1) Fixed StatBlocks Card Text Color in Dark Mode
+Changed all text colors in StatBlocks cards from #ffffff to #1a1a1a in dark mode
+This includes:
+Stat titles
+Stat values
+Change text
+Arrow icons
+This ensures proper contrast against the light background (#E3F5FF) on hover
+in thi cards when the card is hovered over in dark mode then the color is #1a1a1a when it is not being hovered over in dark mode
+#ffffff
+2).icon-breadcrumb  this class the flexgro property should have value 1 
+3)the geographychart component has scroll right now adjust the content so that scroll is not required and add plot point on the map the points should be black dots refer the geographyChart.png and conform the ui look to the png  
+4) see the @RightBar/  layout and add right bar according to cssInfo.txt and customie for darktheme from cssDark.txt make modular reusable components 
+5)the right bar component appers right beside maincontent in right panel take reference from and see how the header component does not span over rightbar right bar has full heightand add the left border in right bar @Home Page - Light.png 

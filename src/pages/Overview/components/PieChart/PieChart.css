@@ -1,0 +1,375 @@
+/* PieChart Component Styles */
+
+/* Main Container */
+.pie-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 16px;
+  isolation: isolate;
+  width: 202px;
+  min-width: 200px;
+  max-width: 272px;
+  height: 344px;
+  background: #f7f9fb;
+  border-radius: 16px;
+  flex: none;
+  order: 5;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Dark Theme */
+.pie-chart.dark {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Header */
+.pie-chart-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 154px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+/* Title */
+.pie-chart-title {
+  width: 154px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  margin: 0;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Title */
+.pie-chart.dark .pie-chart-title {
+  color: #ffffff;
+}
+
+/* Pie Chart Container */
+.pie-chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 154px;
+  height: 154px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+/* SVG */
+.pie-chart-svg {
+  width: 154px;
+  height: 154px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Pie Segment */
+.pie-segment {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.pie-segment:hover {
+  filter: brightness(1.1);
+  stroke-width: 3;
+}
+
+.pie-segment.hovered {
+  filter: brightness(1.2);
+  stroke-width: 3;
+}
+
+/* Center Percentage */
+.center-percentage {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Dark Theme Center Percentage */
+.pie-chart.dark .center-percentage {
+  color: #ffffff;
+}
+
+/* Legend */
+.pie-chart-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 154px;
+  height: 120px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+/* Legend Item */
+.legend-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 154px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Legend Tag Container */
+.legend-tag-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 80px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Legend Dot */
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Legend Label */
+.legend-label {
+  width: 64px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Dark Theme Legend Label */
+.pie-chart.dark .legend-label {
+  color: #ffffff;
+}
+
+/* Legend Amount */
+.legend-amount {
+  width: 66px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  text-align: right;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Dark Theme Legend Amount */
+.pie-chart.dark .legend-amount {
+  color: #ffffff;
+}
+
+/* Tooltip */
+.pie-chart-tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tooltip-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.tooltip-label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tooltip-value {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.tooltip-percentage {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pie-chart {
+    width: 100%;
+    min-width: 200px;
+    max-width: 272px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pie-chart {
+    width: 100%;
+    min-width: 180px;
+    max-width: 250px;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .pie-chart-header,
+  .pie-chart-container,
+  .pie-chart-legend {
+    width: 100%;
+  }
+
+  .pie-chart-svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pie-chart {
+    padding: 16px;
+    gap: 10px;
+    min-width: 160px;
+    max-width: 220px;
+  }
+}
+
+/* Animation for entrance */
+.pie-chart {
+  animation: slideInUp 0.6s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.legend-item:hover {
+  background: rgba(28, 28, 28, 0.02);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pie-chart.dark .legend-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Focus styles for accessibility */
+.legend-item:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+.pie-chart.dark .legend-item:focus {
+  outline-color: #0a84ff;
+}
+
+/* Loading state */
+.pie-chart.loading {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

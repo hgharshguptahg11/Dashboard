@@ -1,0 +1,388 @@
+/* TrendingTable Component Styles */
+
+/* Main Container */
+.trending-table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 4px;
+  width: 662px;
+  min-width: 662px;
+  height: 336px;
+  background: #f7f9fb;
+  border-radius: 16px;
+  flex: none;
+  order: 4;
+  flex-grow: 1;
+}
+
+/* Dark Theme */
+.trending-table.dark {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Table Header */
+.table-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 614px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Table Title */
+.table-title {
+  width: 614px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  margin: 0;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Table Title */
+.trending-table.dark .table-title {
+  color: #ffffff;
+}
+
+/* Table Container */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 614px;
+  height: 288px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Table Header Row */
+.table-header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 0px;
+  width: 614px;
+  height: 44px;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Header Row Border */
+.trending-table.dark .table-header-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Table Header Cell */
+.table-header-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 16px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Name Header */
+.name-header {
+  width: 200px;
+}
+
+/* Price Header */
+.price-header {
+  width: 100px;
+}
+
+/* Quantity Header */
+.quantity-header {
+  width: 100px;
+}
+
+/* Amount Header */
+.amount-header {
+  width: 120px;
+}
+
+/* Header Cell Text */
+.table-header-cell {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: rgba(28, 28, 28, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dark Theme Header Cell Text */
+.trending-table.dark .table-header-cell {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Table Body */
+.table-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 614px;
+  height: 244px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  overflow-y: auto;
+}
+
+/* Table Row */
+.table-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 0px;
+  width: 614px;
+  height: 44px;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.05);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  transition: background-color 0.2s ease;
+}
+
+/* Dark Theme Table Row Border */
+.trending-table.dark .table-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Table Row Hover */
+.table-row:hover {
+  background: rgba(28, 28, 28, 0.02);
+}
+
+.trending-table.dark .table-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Table Cell */
+.table-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 16px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Name Cell */
+.name-cell {
+  width: 200px;
+}
+
+/* Price Cell */
+.price-cell {
+  width: 100px;
+}
+
+/* Quantity Cell */
+.quantity-cell {
+  width: 100px;
+}
+
+/* Amount Cell */
+.amount-cell {
+  width: 120px;
+}
+
+/* Cell Text */
+.cell-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Cell Text */
+.trending-table.dark .cell-text {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .trending-table {
+    width: 100%;
+    min-width: 500px;
+    max-width: 662px;
+  }
+
+  .table-header,
+  .table-container,
+  .table-header-row,
+  .table-body,
+  .table-row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-table {
+    padding: 20px;
+    gap: 8px;
+    min-width: 400px;
+  }
+
+  .table-header,
+  .table-container,
+  .table-header-row,
+  .table-body,
+  .table-row {
+    width: 100%;
+  }
+
+  .name-header,
+  .name-cell {
+    width: 150px;
+  }
+
+  .price-header,
+  .price-cell {
+    width: 80px;
+  }
+
+  .quantity-header,
+  .quantity-cell {
+    width: 80px;
+  }
+
+  .amount-header,
+  .amount-cell {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending-table {
+    padding: 16px;
+    gap: 6px;
+    min-width: 300px;
+  }
+
+  .name-header,
+  .name-cell {
+    width: 120px;
+  }
+
+  .price-header,
+  .price-cell {
+    width: 60px;
+  }
+
+  .quantity-header,
+  .quantity-cell {
+    width: 60px;
+  }
+
+  .amount-header,
+  .amount-cell {
+    width: 80px;
+  }
+}
+
+/* Animation for entrance */
+.trending-table {
+  animation: slideInUp 0.6s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.table-row:hover .cell-text {
+  color: #007aff;
+}
+
+.trending-table.dark .table-row:hover .cell-text {
+  color: #0a84ff;
+}
+
+/* Focus styles for accessibility */
+.table-row:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+.trending-table.dark .table-row:focus {
+  outline-color: #0a84ff;
+}
+
+/* Loading state */
+.trending-table.loading {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

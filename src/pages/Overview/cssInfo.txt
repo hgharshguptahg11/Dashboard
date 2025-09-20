@@ -1,0 +1,17 @@
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+align-content: flex-start;
+padding: 0px;
+gap: 28px;
+
+position: absolute;
+width: 892px;
+height: 970px;
+left: 240px;
+top: 140px;
+

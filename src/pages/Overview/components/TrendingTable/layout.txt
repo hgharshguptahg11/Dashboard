@@ -1,0 +1,6 @@
+1. heading ->Top Selling Products
+2. Table has 4 frames each mapping to a column
+    2.1 name column
+        2.1.1 column header 
+        2.1.2 column row
+    similary the other column are there namely price, quantity, amount

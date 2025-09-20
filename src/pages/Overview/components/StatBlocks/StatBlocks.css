@@ -1,0 +1,349 @@
+/* StatsBlock Component Styles */
+
+/* Main Container */
+.stats-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 28px;
+  width: 432px;
+  height: 252px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* Individual Stat Card */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+  width: 202px;
+  min-width: 200px;
+  height: 112px;
+  border-radius: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stats-block.dark .stat-card:hover {
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+  background-color: #e3f5ff !important;
+}
+
+.stats-block.dark .stat-card {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Stat Content */
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 154px;
+  height: 64px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Stat Header */
+.stat-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 154px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Stat Title */
+.stat-title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Stat Title */
+.stats-block.dark .stat-title {
+  color: #ffffff;
+}
+
+/* Dark Theme Stat Title on Hover */
+.stats-block.dark .stat-card:hover .stat-title {
+  color: #1a1a1a;
+}
+
+/* Stat Body */
+.stat-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 154px;
+  height: 36px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for stat body - switches positions */
+.stat-card:hover .stat-body {
+  flex-direction: row-reverse;
+}
+
+/* Stat Value */
+.stat-value {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme Stat Value */
+.stats-block.dark .stat-value {
+  color: #ffffff;
+}
+
+/* Dark Theme Stat Value on Hover */
+.stats-block.dark .stat-card:hover .stat-value {
+  color: #1a1a1a;
+}
+
+/* Stat Change */
+.stat-change {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 4px;
+  height: 18px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  transition: all 0.3s ease;
+}
+
+/* Change Text */
+.change-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
+  color: #1c1c1c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dark Theme Change Text */
+.stats-block.dark .change-text {
+  color: #ffffff;
+}
+
+/* Dark Theme Change Text on Hover */
+.stats-block.dark .stat-card:hover .change-text {
+  color: #1a1a1a;
+}
+
+/* Change Icon */
+.change-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Arrow Icons */
+.arrow-rise,
+.arrow-fall {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #1c1c1c;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme Arrow Icons */
+.stats-block.dark .arrow-rise,
+.stats-block.dark .arrow-fall {
+  color: #ffffff;
+}
+
+/* Dark Theme Arrow Icons on Hover */
+.stats-block.dark .stat-card:hover .arrow-rise,
+.stats-block.dark .stat-card:hover .arrow-fall {
+  color: #1a1a1a;
+}
+
+/* Hover Effects */
+.stat-card:hover .arrow-rise,
+.stat-card:hover .arrow-fall {
+  transform: scale(1.1);
+}
+
+.stat-card:hover .change-text {
+  font-weight: 500;
+}
+
+.stat-card:hover .stat-value {
+  transform: scale(1.05);
+}
+
+/* Focus Styles for Accessibility */
+.stat-card:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+.stats-block.dark .stat-card:focus {
+  outline-color: #0a84ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-block {
+    width: 100%;
+    gap: 16px;
+    height: auto;
+  }
+
+  .stat-card {
+    width: calc(50% - 8px);
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-block {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stat-card {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Animation for card entrance */
+.stat-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Micro-interaction for click */
+.stat-card:active {
+  transform: scale(0.98);
+}
+
+/* Loading state animation */
+.stat-card.loading {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
