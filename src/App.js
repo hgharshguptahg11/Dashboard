@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Box } from '@mui/material';
+import LeftPanel from './components/LeftPanel';
+import RightPanel from './components/RightPanel';
 import './App.css';
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState('default');
+
+  const handlePageChange = (page) => {
+    setSelectedPage(page);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
+      <LeftPanel onPageChange={handlePageChange} selectedPage={selectedPage} />
+      <RightPanel selectedPage={selectedPage} />
+    </Box>
   );
 }
 
