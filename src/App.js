@@ -5,7 +5,7 @@ import RightPanel from "./components/RightPanel";
 import "./App.css";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("default");
+  const [selectedPage, setSelectedPage] = useState("overview");
 
   const handlePageChange = (page) => {
     setSelectedPage(page);
