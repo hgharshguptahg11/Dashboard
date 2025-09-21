@@ -22,7 +22,7 @@ import BlogIcon from '../../../assets/Blog.png';
 import SocialIcon from '../../../assets/social.png';
 
 const PagesSection = ({ onPageChange, selectedPage }) => {
-    const [userProfileExpanded, setUserProfileExpanded] = useState(true);
+    const [userProfileExpanded, setUserProfileExpanded] = useState(false);
 
     const handleUserProfileToggle = () => {
         setUserProfileExpanded(!userProfileExpanded);
