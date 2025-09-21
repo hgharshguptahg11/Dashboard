@@ -1,0 +1,303 @@
+/* Dashboards Section Styles */
+
+/* Frame */
+.dashboardsFrame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 12px;
+  gap: 4px;
+  width: 180px;
+  height: 168px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+
+/* Header Text */
+.dashboardsHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px 12px;
+  width: 180px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.dashboardsHeaderText {
+  width: 156px;
+  height: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+  color: rgba(28, 28, 28, 0.4);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Content Items */
+.dashboardContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 4px 8px 4px 0px;
+  gap: 4px;
+  width: 180px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.dashboardContent.selected {
+  background: rgba(28, 28, 28, 0.05);
+}
+
+/* Group */
+.dashboardGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  row-gap: 0px;
+  width: 24px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* IconSet */
+.dashboardIconSet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px -12px;
+}
+
+.dashboardSelected {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  position: relative;
+}
+
+.dashboardRectangle {
+  position: absolute;
+  left: 0%;
+  right: 80%;
+  top: 10%;
+  bottom: 10%;
+  background: #1C1C1C;
+}
+
+.dashboardArrowIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.dashboardArrowVector {
+  position: absolute;
+  left: 34.38%;
+  right: 34.38%;
+  top: 21.88%;
+  bottom: 21.88%;
+  background: rgba(28, 28, 28, 0.2);
+}
+
+/* IconText */
+.dashboardIconText {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 4px;
+  width: 144px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.dashboardItemIconSet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.dashboardItemIcon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  position: relative;
+}
+
+.dashboardItemVector1 {
+  position: absolute;
+  left: 12.5%;
+  right: 62.5%;
+  top: 14.65%;
+  bottom: 43.16%;
+  background: rgba(28, 28, 28, 0.1);
+}
+
+.dashboardItemVector2 {
+  position: absolute;
+  left: 9.37%;
+  right: 9.38%;
+  top: 9.38%;
+  bottom: 9.35%;
+  background: #1C1C1C;
+}
+
+/* Shopping Bag Icon */
+.dashboardItemIcon.shopping-bag .dashboardItemVector1 {
+  left: 12.5%;
+  right: 12.5%;
+  top: 18.75%;
+  bottom: 68.75%;
+  background: rgba(28, 28, 28, 0.1);
+}
+
+.dashboardItemIcon.shopping-bag .dashboardItemVector2 {
+  left: 9.38%;
+  right: 9.38%;
+  top: 15.62%;
+  bottom: 15.62%;
+  background: #1C1C1C;
+}
+
+/* Folder Icon */
+.dashboardItemIcon.folder .dashboardItemVector1 {
+  left: 12.5%;
+  right: 50%;
+  top: 21.88%;
+  bottom: 59.38%;
+  background: rgba(28, 28, 28, 0.1);
+}
+
+.dashboardItemIcon.folder .dashboardItemVector2 {
+  left: 9.38%;
+  right: 9.38%;
+  top: 18.75%;
+  bottom: 15.62%;
+  background: #1C1C1C;
+}
+
+/* Book Icon */
+.dashboardItemIcon.book .dashboardItemVector1 {
+  left: 9.38%;
+  right: 9.38%;
+  top: 21.88%;
+  bottom: 9.38%;
+  background: rgba(28, 28, 28, 0.1);
+}
+
+.dashboardItemIcon.book .dashboardItemVector2 {
+  left: 6.25%;
+  right: 6.25%;
+  top: 18.75%;
+  bottom: 6.25%;
+  background: #1C1C1C;
+}
+
+/* Text */
+.dashboardItemText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 49px;
+  height: 20px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.dashboardItemLabel {
+  width: 49px;
+  height: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+  color: #1C1C1C;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Specific widths for different labels */
+.dashboardItemText:nth-child(2) .dashboardItemLabel {
+  width: 81px;
+}
+
+.dashboardItemText:nth-child(3) .dashboardItemLabel {
+  width: 54px;
+}
+
+.dashboardItemText:nth-child(4) .dashboardItemLabel {
+  width: 101px;
+}
