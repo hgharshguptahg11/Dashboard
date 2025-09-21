@@ -8,7 +8,7 @@ import OnlineCourses from '../../../assets/OnlineCourses.png';
 
 const DashboardsSection = ({ onPageChange, selectedPage }) => {
   const dashboardItems = [
-    { id: 'default', label: 'Default', icon: Default, selected: true },
+    { id: 'overview', label: 'Default', icon: Default },
     { id: 'ecommerce', label: 'eCommerce', icon: ECommerce, hasSubmenu: true },
     { id: 'projects-dashboard', label: 'Projects', icon: Project, hasSubmenu: true },
     { id: 'online-courses', label: 'Online Courses', icon: OnlineCourses, hasSubmenu: true }
@@ -31,7 +31,7 @@ const DashboardsSection = ({ onPageChange, selectedPage }) => {
       {dashboardItems.map((item, index) => (
         <Box 
           key={item.id} 
-          className={`dashboardContent ${item.selected ? 'selected' : ''}`}
+          className={`dashboardContent ${selectedPage === item.id ? 'selected' : ''}`}
           onClick={() => handlePageSelect(item.id)}
         >
           <Box className="dashboardGroup">
