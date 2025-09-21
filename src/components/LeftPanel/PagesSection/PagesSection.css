@@ -1,7 +1,8 @@
-/* PagesSection Styles - Updated to match Figma specifications */
+/* PagesSection Styles - Updated to match Figma specifications exactly */
 
 /* Frame */
 .sectionContainer {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,7 +18,8 @@
 }
 
 /* Text */
-.sectionTitle {
+.pagesectiontitle {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,13 +33,16 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  /* Text styling */
+}
+
+.pagesectiontitletext {
+  /* Text */
   width: 156px;
   height: 20px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
   color: rgba(28, 28, 28, 0.4);
@@ -58,13 +63,14 @@
 
 /* Content */
 .listItemButton {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   align-content: flex-start;
-  padding: 4px 8px 4px 0px;
-  gap: 4px;
+  padding: 4px 4px 4px 12px;
+  gap: 0px;
   width: 180px;
   height: 28px;
   border-radius: 8px;
@@ -74,6 +80,8 @@
   align-self: stretch;
   flex-grow: 0;
   transition: background-color 0.2s;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .listItemButton:hover {
@@ -82,15 +90,30 @@
 
 .listItemButton.selected {
   background-color: #f5f5f5;
-  border-left: 3px solid #1976d2;
 }
 
-.listItemButton.selected:hover {
-  background-color: #f0f0f0;
+/* Group */
+.listItemGroup {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  row-gap: 0px;
+  width: 24px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* IconSet */
-.listItemIcon {
+.listItemIconSet {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -103,11 +126,68 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  color: #666;
+  margin: 0px;
+}
+
+/* Expand/Collapse Icon */
+.expandIcon {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: rgba(28, 28, 28, 0.2);
+  cursor: pointer;
+}
+
+/* IconText */
+.listItemIconText {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 0px;
+  width: 144px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* IconSet for main items */
+.listItemIcon {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* Text */
 .listItemText {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -151,28 +231,22 @@
   flex-grow: 0;
   color: rgba(28, 28, 28, 0.2);
   flex-shrink: 0;
-  margin-left: auto;
-}
-
-.expandIcon {
-  color: rgba(28, 28, 28, 0.2);
-  flex-shrink: 0;
-  margin-left: auto;
 }
 
 .submenuContainer {
   padding-left: 42px;
 }
 
-/* Content */
+/* Content for submenu items */
 .submenuItem {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   align-content: flex-start;
-  padding: 4px 8px 4px 0px;
-  gap: 4px;
+  padding: 4px 4px 4px 12px;
+  gap: 0px;
   width: 180px;
   height: 28px;
   border-radius: 8px;
@@ -181,6 +255,7 @@
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .submenuItem:hover {
@@ -195,8 +270,9 @@
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Text */
+/* Text for submenu items - smaller font size */
 .submenuText {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,7 +290,7 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
   color: #1c1c1c;

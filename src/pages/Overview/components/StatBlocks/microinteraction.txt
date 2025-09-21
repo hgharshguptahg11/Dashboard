@@ -1,7 +1,0 @@
-the statsblock component has 4 cards inside it 
-inside each card there are 2 contents 
-1. the heading  like customers orders etc..
-2. this content itself has 2 parts -
-    1. text 
-    2. icon text with increment or decrment arrow
-when the user hovers over the text or icon text these two swith places at first text is on the lfet and icontext is on right but hover effect switches them

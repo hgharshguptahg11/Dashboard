@@ -15,7 +15,7 @@ const Overview = () => {
   return (
     <div className={`overview-page ${isDarkMode ? "dark" : "light"}`}>
       <div className="overview-header">
-        <h1 className="overview-title">Ecommerce</h1>
+        <h1 className="overview-title">eCommerce</h1>
       </div>
 
       <div className="overview-main">
