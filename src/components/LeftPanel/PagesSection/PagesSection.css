@@ -55,6 +55,11 @@
   flex-grow: 0;
 }
 
+/* Dark Theme Pages Section Title Text */
+.leftPanel.dark .pagesectiontitletext {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .listContainer {
   padding: 0;
 }
@@ -92,6 +97,15 @@
 
 .listItemButton.selected {
   background-color: #f5f5f5;
+}
+
+/* Dark Theme List Item Button */
+.leftPanel.dark .listItemButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .listItemButton.selected {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Group */
@@ -148,6 +162,11 @@
   flex-grow: 0;
   color: rgba(28, 28, 28, 0.2);
   cursor: pointer;
+}
+
+/* Dark Theme Expand Icon */
+.leftPanel.dark .expandIcon {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* IconText */
@@ -228,6 +247,11 @@
   text-overflow: ellipsis;
 }
 
+/* Dark Theme List Item Label */
+.leftPanel.dark .listItemLabel {
+  color: #FFFFFF;
+}
+
 /* Specific widths for different labels based on Figma */
 .listItemLabel.user-profile {
   width: 78px;
@@ -259,6 +283,11 @@
   flex-grow: 0;
   color: rgba(28, 28, 28, 0.2);
   flex-shrink: 0;
+}
+
+/* Dark Theme Chevron Icon */
+.leftPanel.dark .chevronIcon {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .submenuContainer {
@@ -298,6 +327,15 @@
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+/* Dark Theme Submenu Item */
+.leftPanel.dark .submenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .submenuItem.selected:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Text for submenu items - smaller font size */
 .submenuText {
   /* Auto layout */
@@ -332,6 +370,16 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+
+/* Dark Theme Submenu Label */
+.leftPanel.dark .submenuLabel {
+  color: #FFFFFF;
+}
+
+/* Dark Theme Pages Icons */
+.leftPanel.dark .listItemIcon img {
+  filter: brightness(0) invert(1);
 }
 
 /* Specific widths for submenu labels */

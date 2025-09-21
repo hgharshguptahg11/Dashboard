@@ -84,6 +84,11 @@
   margin: 0;
 }
 
+/* Dark Theme Favorites Button Label */
+.leftPanel.dark .favoritesButtonLabel {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 /* Recently Button */
 .recentlyButton {
   display: flex;
@@ -132,6 +137,11 @@
   align-self: stretch;
   flex-grow: 0;
   margin: 0;
+}
+
+/* Dark Theme Recently Button Label */
+.leftPanel.dark .recentlyButtonLabel {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* Content Items */
@@ -201,6 +211,11 @@
   border-radius: 50%;
 }
 
+/* Dark Theme Vector */
+.leftPanel.dark .vector {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .itemText {
   display: flex;
   flex-direction: column;
@@ -230,4 +245,21 @@
   align-self: stretch;
   flex-grow: 0;
   margin: 0;
+}
+
+/* Selected Item Label */
+.itemLabel.selected {
+  color: #1C1C1C;
+  font-weight: 500;
+}
+
+/* Dark Theme Item Label */
+.leftPanel.dark .itemLabel {
+  color: #FFFFFF;
+}
+
+/* Dark Theme Selected Item Label */
+.leftPanel.dark .itemLabel.selected {
+  color: #FFFFFF;
+  font-weight: 500;
 }

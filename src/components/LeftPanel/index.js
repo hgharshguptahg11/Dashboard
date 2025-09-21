@@ -3,15 +3,17 @@ import {
     Box,
     Typography
 } from '@mui/material';
+import { useTheme } from '../../contexts/ThemeContext';
 import FavoritesSection from './FavoritesSection';
 import './LeftPanel.css';
 import DashboardsSection from './DashboardsSection';
 import PagesSection from './PagesSection';
 
 const LeftPanel = ({ onPageChange, selectedPage }) => {
+    const { isDarkMode } = useTheme();
 
     return (
-        <Box className="leftPanel">
+        <Box className={`leftPanel ${isDarkMode ? 'dark' : ''}`}>
             {/* User Profile Section */}
             <Box className="userProfileSection">
                 <Box className="userProfileContainer">

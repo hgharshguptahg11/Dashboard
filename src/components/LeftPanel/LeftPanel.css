@@ -9,6 +9,12 @@
   overflow-y: auto;
 }
 
+/* Dark Theme */
+.leftPanel.dark {
+  background-color: #1a1a1a;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .userProfileSection {
   padding: 4px 86px 4px 4px;
   margin: 20px  16px 16px 16px;
@@ -45,6 +51,11 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+
+/* Dark Theme User Profile Name */
+.leftPanel.dark .userProfileName {
+  color: #FFFFFF;
 }
 
 .navigationContent {
@@ -88,6 +99,11 @@
   margin-bottom: 8px;
 }
 
+/* Dark Theme Section Title */
+.leftPanel.dark .sectionTitle {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .listContainer {
   padding: 0;
 }
@@ -115,6 +131,20 @@
   background-color: #f0f0f0;
 }
 
+/* Dark Theme List Item Buttons */
+.leftPanel.dark .listItemButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .listItemButton.selected {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #C6C7F8;
+}
+
+.leftPanel.dark .listItemButton.selected:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
 .listItemIcon {
   min-width: 32px;
   color: #666;
@@ -130,6 +160,19 @@
   color: #333;
 }
 
+/* Dark Theme List Item Icons and Text */
+.leftPanel.dark .listItemIcon {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.leftPanel.dark .listItemText {
+  color: #FFFFFF;
+}
+
+.leftPanel.dark .listItemText.primary {
+  color: #FFFFFF;
+}
+
 .chevronIcon {
   font-size: 16px;
   color: #999;
@@ -137,6 +180,15 @@
 
 .expandIcon {
   color: #666;
+}
+
+/* Dark Theme Chevron and Expand Icons */
+.leftPanel.dark .chevronIcon {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.leftPanel.dark .expandIcon {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .submenuContainer {
@@ -163,6 +215,19 @@
 .submenuText {
   font-size: 0.875rem;
   color: #333;
+}
+
+/* Dark Theme Submenu Items */
+.leftPanel.dark .submenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .submenuItem.selected:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .submenuText {
+  color: #FFFFFF;
 }
 
 .divider {

@@ -46,11 +46,10 @@ const FavoritesSection = ({ onPageChange, selectedPage }) => {
             </Box>
             <Box className="itemText">
               <Typography 
-                className="itemLabel"
+                className={`itemLabel ${selectedPage === item.id ? 'selected' : ''}`}
                 onClick={() => handlePageSelect(item.id)}
                 style={{ 
-                  cursor: 'pointer',
-                  color: selectedPage === item.id ? '#1C1C1C' : '#1C1C1C'
+                  cursor: 'pointer'
                 }}
               >
                 {item.label}

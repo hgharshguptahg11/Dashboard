@@ -50,6 +50,11 @@
   margin: 0;
 }
 
+/* Dark Theme Dashboards Header Text */
+.leftPanel.dark .dashboardsHeaderText {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 /* Content Items */
 .dashboardContent {
   display: flex;
@@ -82,6 +87,19 @@
 
 .dashboardContent.selected:hover {
   background: rgba(28, 28, 28, 0.15);
+}
+
+/* Dark Theme Dashboard Content */
+.leftPanel.dark .dashboardContent:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardContent.selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardContent.selected:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Group */
@@ -135,6 +153,11 @@
   background: #1C1C1C;
 }
 
+/* Dark Theme Dashboard Rectangle */
+.leftPanel.dark .dashboardRectangle {
+  background: #C6C7F8;
+}
+
 .dashboardArrowIcon {
   display: flex;
   flex-direction: row;
@@ -157,6 +180,11 @@
   top: 21.88%;
   bottom: 21.88%;
   background: rgba(28, 28, 28, 0.2);
+}
+
+/* Dark Theme Dashboard Arrow Vector */
+.leftPanel.dark .dashboardArrowVector {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* IconText */
@@ -217,6 +245,15 @@
   background: #1C1C1C;
 }
 
+/* Dark Theme Dashboard Item Vectors */
+.leftPanel.dark .dashboardItemVector1 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardItemVector2 {
+  background: #FFFFFF;
+}
+
 /* Shopping Bag Icon */
 .dashboardItemIcon.shopping-bag .dashboardItemVector1 {
   left: 12.5%;
@@ -232,6 +269,15 @@
   top: 15.62%;
   bottom: 15.62%;
   background: #1C1C1C;
+}
+
+/* Dark Theme Shopping Bag Icon */
+.leftPanel.dark .dashboardItemIcon.shopping-bag .dashboardItemVector1 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardItemIcon.shopping-bag .dashboardItemVector2 {
+  background: #FFFFFF;
 }
 
 /* Folder Icon */
@@ -251,6 +297,15 @@
   background: #1C1C1C;
 }
 
+/* Dark Theme Folder Icon */
+.leftPanel.dark .dashboardItemIcon.folder .dashboardItemVector1 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardItemIcon.folder .dashboardItemVector2 {
+  background: #FFFFFF;
+}
+
 /* Book Icon */
 .dashboardItemIcon.book .dashboardItemVector1 {
   left: 9.38%;
@@ -266,6 +321,15 @@
   top: 18.75%;
   bottom: 6.25%;
   background: #1C1C1C;
+}
+
+/* Dark Theme Book Icon */
+.leftPanel.dark .dashboardItemIcon.book .dashboardItemVector1 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel.dark .dashboardItemIcon.book .dashboardItemVector2 {
+  background: #FFFFFF;
 }
 
 /* Text */
@@ -301,10 +365,25 @@
   transition: all 0.2s ease;
 }
 
+/* Dark Theme Dashboard Item Label */
+.leftPanel.dark .dashboardItemLabel {
+  color: #FFFFFF;
+}
+
 /* Selected state text styling */
 .dashboardContent.selected .dashboardItemLabel {
   font-weight: 500;
   color: #1C1C1C;
+}
+
+/* Dark Theme Selected state text styling */
+.leftPanel.dark .dashboardContent.selected .dashboardItemLabel {
+  color: #FFFFFF;
+}
+
+/* Dark Theme Dashboard Icons */
+.leftPanel.dark .dashboardItemIcon {
+  filter: brightness(0) invert(1);
 }
 
 /* Specific widths for different labels */
