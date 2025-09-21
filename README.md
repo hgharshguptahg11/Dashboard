@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# Juspay Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive SaaS dashboard built with React, featuring comprehensive analytics, data visualization, and user management capabilities.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### 📊 Dashboard Overview
+- **Interactive Statistics Cards**: Real-time metrics with hover effects and trend indicators
+- **Advanced Data Visualization**: 
+  - Bar charts with interactive tooltips
+  - Line graphs with customizable legends
+  - Pie charts with hover interactions
+  - Geographic maps with plot points
+- **Responsive Design**: Optimized for desktop and tablet viewing
 
-### `npm start`
+### 🛒 E-Commerce Management
+- **Order Management**: Comprehensive order listing with search and filtering
+- **Data Table**: Sortable, paginated table with bulk operations
+- **Real-time Updates**: Live data synchronization
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎨 User Interface
+- **Dark/Light Theme**: Seamless theme switching with persistent preferences
+- **Interactive Navigation**: Collapsible sidebar with hover effects
+- **Responsive Layout**: Adaptive header and content areas
+- **Modern Design**: Clean, professional interface with smooth animations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📱 Components
+- **Left Panel**: Navigation with favorites, dashboards, and pages sections
+- **Header**: Dynamic width based on page context (full-width for eCommerce, reserved space for notifications)
+- **Right Panel**: Notifications, activities, and contacts (Overview page only)
+- **Content Areas**: Flexible layouts for different page types
 
-### `npm test`
+## 🛠️ Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend Framework**: React 19.1.1
+- **State Management**: Redux Toolkit
+- **UI Library**: Material-UI (MUI) 7.3.2
+- **Styling**: CSS3 with custom components
+- **Maps**: React Simple Maps
+- **Icons**: Material-UI Icons + Custom assets
+- **Build Tool**: Create React App
 
-### `npm run build`
+## 📦 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd dashboard
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🏗️ Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+dashboard/
+├── public/                 # Static assets
+├── src/
+│   ├── assets/            # Images and icons
+│   ├── components/        # Reusable UI components
+│   │   ├── Header/        # Top navigation bar
+│   │   ├── LeftPanel/     # Sidebar navigation
+│   │   └── RightPanel/    # Main content wrapper
+│   ├── contexts/          # React contexts (Theme)
+│   ├── pages/             # Page components
+│   │   ├── Overview/      # Dashboard overview
+│   │   └── SearchTable/   # E-commerce orders
+│   ├── services/          # API and data services
+│   ├── store/             # Redux store configuration
+│   └── App.js             # Main application component
+├── package.json
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 Key Components
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Overview Page
+- **StatBlocks**: Key performance indicators with trend arrows
+- **BarChart**: Interactive bar chart with hover tooltips
+- **Linegraph**: Time-series data visualization
+- **GeographyChart**: World map with location-based metrics
+- **TrendingTable**: Top-selling products table
+- **PieChart**: Revenue distribution visualization
+- **RightBar**: Notifications, activities, and contacts
 
-## Learn More
+### E-Commerce Page
+- **SearchTable**: Comprehensive order management
+- **ActionRow**: Search, filter, and bulk operations
+- **FunctionalTable**: Sortable data table with pagination
+- **Pagination**: Navigation controls for large datasets
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Theming
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application supports both light and dark themes with:
+- **Automatic Theme Detection**: System preference-based initialization
+- **Manual Toggle**: Theme switcher in header
+- **Persistent Storage**: User preference saving
+- **Component-level Styling**: Individual component theme support
 
-### Code Splitting
+## 📊 Data Visualization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Charts and Graphs
+- **Interactive Tooltips**: Hover effects with detailed information
+- **Responsive Design**: Charts adapt to container size
+- **Custom Styling**: Brand-consistent color schemes
+- **Animation Support**: Smooth transitions and micro-interactions
 
-### Analyzing the Bundle Size
+### Maps
+- **Geographic Visualization**: World map with country highlighting
+- **Plot Points**: Interactive markers for location data
+- **Zoom Controls**: Pan and zoom functionality
+- **Custom Projections**: Optimized map views
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔧 Development
 
-### Making a Progressive Web App
+### Available Scripts
+- `npm start`: Start development server
+- `npm build`: Create production build
+- `npm test`: Run test suite
+- `npm eject`: Eject from Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Code Quality
+- **ESLint**: Code linting and formatting
+- **Modular Architecture**: Component-based structure
+- **TypeScript Ready**: Easy migration path
+- **Performance Optimized**: Lazy loading and code splitting
 
-### Advanced Configuration
+## 🌐 Browser Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-### Deployment
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Desktop**: Full-featured experience with all components
+- **Tablet**: Optimized layout with collapsible sidebar
+- **Mobile**: Touch-friendly interface (planned)
 
-### `npm run build` fails to minify
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Production Build
+```bash
+npm run build
+```
+
+### Environment Variables
+Create a `.env` file in the root directory:
+```
+REACT_APP_API_URL=your_api_url
+REACT_APP_VERSION=1.0.0
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Material-UI for the component library
+- React Simple Maps for geographic visualization
+- Redux Toolkit for state management
+- Create React App for the development environment
+
+## 📞 Support
+
+For support and questions, please contact the development team or create an issue in the repository.
+
+---
+
+**Built with ❤️ using React and modern web technologies**
