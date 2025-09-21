@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   List,
@@ -8,8 +8,8 @@ import {
   ListItemText,
   Typography,
   Divider,
-  Collapse
-} from '@mui/material';
+  Collapse,
+} from "@mui/material";
 import {
   PieChart as PieChartIcon,
   ShoppingBag as ShoppingBagIcon,
@@ -21,9 +21,9 @@ import {
   Article as ArticleIcon,
   ExpandLess,
   ExpandMore,
-  ChevronRight
-} from '@mui/icons-material';
-import './LeftPanel.css';
+  ChevronRight,
+} from "@mui/icons-material";
+import "./LeftPanel.css";
 
 const LeftPanel = ({ onPageChange, selectedPage }) => {
   const [userProfileExpanded, setUserProfileExpanded] = useState(true);
@@ -37,29 +37,59 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
   };
 
   const favoritesItems = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'projects', label: 'Projects' }
+    { id: "overview", label: "Overview" },
+    { id: "projects", label: "Projects" },
   ];
 
   const dashboardItems = [
-    { id: 'default', label: 'Default', icon: <PieChartIcon />, selected: true },
-    { id: 'ecommerce', label: 'eCommerce', icon: <ShoppingBagIcon />, hasSubmenu: true },
-    { id: 'projects-dashboard', label: 'Projects', icon: <FolderIcon />, hasSubmenu: true },
-    { id: 'online-courses', label: 'Online Courses', icon: <MenuBookIcon />, hasSubmenu: true }
+    {
+      id: "default",
+      label: "Default",
+      icon: <PieChartIcon />,
+      selected: selectedPage === "default",
+    },
+    {
+      id: "ecommerce",
+      label: "eCommerce",
+      icon: <ShoppingBagIcon />,
+      selected: selectedPage === "ecommerce",
+    },
+    {
+      id: "projects-dashboard",
+      label: "Projects",
+      icon: <FolderIcon />,
+      hasSubmenu: true,
+    },
+    {
+      id: "online-courses",
+      label: "Online Courses",
+      icon: <MenuBookIcon />,
+      hasSubmenu: true,
+    },
   ];
 
   const userProfileItems = [
-    { id: 'user-overview', label: 'Overview' },
-    { id: 'user-projects', label: 'Projects' },
-    { id: 'user-campaigns', label: 'Campaigns' },
-    { id: 'user-documents', label: 'Documents' },
-    { id: 'user-followers', label: 'Followers' }
+    { id: "user-overview", label: "Overview" },
+    { id: "user-projects", label: "Projects" },
+    { id: "user-campaigns", label: "Campaigns" },
+    { id: "user-documents", label: "Documents" },
+    { id: "user-followers", label: "Followers" },
   ];
 
   const otherPages = [
-    { id: 'account', label: 'Account', icon: <SettingsIcon />, hasSubmenu: true },
-    { id: 'corporate', label: 'Corporate', icon: <GroupIcon />, hasSubmenu: true },
-    { id: 'blog', label: 'Blog', icon: <ArticleIcon />, hasSubmenu: true }
+    {
+      id: "account",
+      label: "Account",
+      icon: <SettingsIcon />,
+      hasSubmenu: true,
+    },
+    {
+      id: "corporate",
+      label: "Corporate",
+      icon: <GroupIcon />,
+      hasSubmenu: true,
+    },
+    { id: "blog", label: "Blog", icon: <ArticleIcon />, hasSubmenu: true },
   ];
 
   return (
@@ -87,12 +117,11 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
                 <ListItemButton
                   onClick={() => handlePageSelect(item.id)}
                   selected={selectedPage === item.id}
-                  className={`listItemButton ${selectedPage === item.id ? 'selected' : ''}`}
+                  className={`listItemButton ${
+                    selectedPage === item.id ? "selected" : ""
+                  }`}
                 >
-                  <ListItemText
-                    primary={item.label}
-                    className="listItemText"
-                  />
+                  <ListItemText primary={item.label} className="listItemText" />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -112,18 +141,15 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
                 <ListItemButton
                   onClick={() => handlePageSelect(item.id)}
                   selected={selectedPage === item.id}
-                  className={`listItemButton ${item.selected ? 'selected' : ''}`}
+                  className={`listItemButton ${
+                    selectedPage === item.id ? "selected" : ""
+                  }`}
                 >
                   <ListItemIcon className="listItemIcon">
                     {item.icon}
                   </ListItemIcon>
-                  <ListItemText
-                    primary={item.label}
-                    className="listItemText"
-                  />
-                  {item.hasSubmenu && (
-                    <ChevronRight className="chevronIcon" />
-                  )}
+                  <ListItemText primary={item.label} className="listItemText" />
+                  {item.hasSubmenu && <ChevronRight className="chevronIcon" />}
                 </ListItemButton>
               </ListItem>
             ))}
@@ -147,11 +173,12 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
                 <ListItemIcon className="listItemIcon">
                   <PersonIcon />
                 </ListItemIcon>
-                <ListItemText
-                  primary="User Profile"
-                  className="listItemText"
-                />
-                {userProfileExpanded ? <ExpandLess className="expandIcon" /> : <ExpandMore className="expandIcon" />}
+                <ListItemText primary="User Profile" className="listItemText" />
+                {userProfileExpanded ? (
+                  <ExpandLess className="expandIcon" />
+                ) : (
+                  <ExpandMore className="expandIcon" />
+                )}
               </ListItemButton>
             </ListItem>
             <Collapse in={userProfileExpanded} timeout="auto" unmountOnExit>
@@ -161,7 +188,9 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
                     <ListItemButton
                       onClick={() => handlePageSelect(item.id)}
                       selected={selectedPage === item.id}
-                      className={`submenuItem ${selectedPage === item.id ? 'selected' : ''}`}
+                      className={`submenuItem ${
+                        selectedPage === item.id ? "selected" : ""
+                      }`}
                     >
                       <ListItemText
                         primary={item.label}
@@ -179,18 +208,15 @@ const LeftPanel = ({ onPageChange, selectedPage }) => {
                 <ListItemButton
                   onClick={() => handlePageSelect(item.id)}
                   selected={selectedPage === item.id}
-                  className={`listItemButton ${selectedPage === item.id ? 'selected' : ''}`}
+                  className={`listItemButton ${
+                    selectedPage === item.id ? "selected" : ""
+                  }`}
                 >
                   <ListItemIcon className="listItemIcon">
                     {item.icon}
                   </ListItemIcon>
-                  <ListItemText
-                    primary={item.label}
-                    className="listItemText"
-                  />
-                  {item.hasSubmenu && (
-                    <ChevronRight className="chevronIcon" />
-                  )}
+                  <ListItemText primary={item.label} className="listItemText" />
+                  {item.hasSubmenu && <ChevronRight className="chevronIcon" />}
                 </ListItemButton>
               </ListItem>
             ))}

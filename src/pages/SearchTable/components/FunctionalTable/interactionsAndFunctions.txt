@@ -1,0 +1,6 @@
+1.create a mock json server to fetch data for table rows 
+2.use redux for state management when something is searched sorted or filtered in table using the ActionRow component 
+3.this table has checkbox functionality so that when a row is selected chck box is checked it is appropriately reflected on ui 
+4.1 on hover of ui the css changes in dark theme the bg color changes to hsla(0, 0%, 100%, 0.05) in the whole row and in light theme it becomes hsla(210, 33%, 98%, 1)
+4.2 and on hover the icon on address appears i have alreadt stated this change in layout.text
+5. the rows of the table will come in sets of 10 the table is paginated and the pagination component lies directly below the table on the right side

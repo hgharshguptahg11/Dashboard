@@ -1,0 +1,477 @@
+/* FunctionalTable Component Styles */
+.functionalTable {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  max-width: 1172px;
+  height: 440px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.tableHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  max-width: 1172px;
+  height: 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  max-width: 1172px;
+  height: 400px;
+}
+
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  max-width: 1172px;
+  height: 40px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.tableRow:hover {
+  background-color: hsla(210, 33%, 98%, 1);
+}
+
+.tableRow.selected {
+  background-color: #ebf4ff;
+}
+
+/* Column Styles */
+.checkboxColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+  width: 24px;
+  height: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.orderIdColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 120px;
+  height: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.userColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.projectColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 180px;
+  height: 40px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.addressColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.dateColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.statusColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 120px;
+  height: 40px;
+  flex: none;
+  order: 6;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+.actionsColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  order: 7;
+  flex-grow: 0;
+  border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+}
+
+/* Header Styles */
+.tableHeader .checkboxColumn,
+.tableHeader .orderIdColumn,
+.tableHeader .userColumn,
+.tableHeader .projectColumn,
+.tableHeader .addressColumn,
+.tableHeader .dateColumn,
+.tableHeader .statusColumn,
+.tableHeader .actionsColumn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Checkbox Styles */
+.headerCheckbox,
+.rowCheckbox {
+  width: 16px;
+  height: 16px;
+}
+
+.headerCheckbox .MuiCheckbox-root,
+.rowCheckbox .MuiCheckbox-root {
+  padding: 0;
+}
+
+/* Row Column Styles - Match header column widths */
+.tableRow .checkboxColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px;
+  width: 24px;
+  height: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tableRow .orderIdColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 120px;
+  height: 40px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+.tableRow .userColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.tableRow .projectColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 180px;
+  height: 40px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+.tableRow .addressColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+}
+
+.tableRow .dateColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 200px;
+  height: 40px;
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+}
+
+.tableRow .statusColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 120px;
+  height: 40px;
+  flex: none;
+  order: 6;
+  flex-grow: 0;
+}
+
+.tableRow .actionsColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  order: 7;
+  flex-grow: 0;
+}
+
+/* User Content Styles */
+.userContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.userName {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+/* Address Content Styles */
+.addressContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.addressText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+  flex: 1;
+}
+
+.addressAction {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tableRow:hover .addressAction {
+  opacity: 1;
+}
+
+/* Date Content Styles */
+.dateContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.dateIcon {
+  width: 12px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.dateText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+/* Status Content Styles */
+.statusContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #1c1c1c;
+}
+
+.statusAction {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-left: 4px;
+}
+
+.actionsButton {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tableRow:hover .actionsButton {
+  opacity: 1;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .tableHeader {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .tableRow {
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .tableRow:hover {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+[data-theme="dark"] .tableRow.selected {
+  background-color: #1e3a8a;
+}
+
+[data-theme="dark"] .orderIdColumn,
+[data-theme="dark"] .projectColumn,
+[data-theme="dark"] .userName,
+[data-theme="dark"] .addressText,
+[data-theme="dark"] .dateText,
+[data-theme="dark"] .statusText {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .tableHeader .checkboxColumn,
+[data-theme="dark"] .tableHeader .orderIdColumn,
+[data-theme="dark"] .tableHeader .userColumn,
+[data-theme="dark"] .tableHeader .projectColumn,
+[data-theme="dark"] .tableHeader .addressColumn,
+[data-theme="dark"] .tableHeader .dateColumn,
+[data-theme="dark"] .tableHeader .statusColumn {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .dateIcon path {
+  fill: #ffffff;
+}
+
+[data-theme="dark"] .addressAction svg path {
+  fill: #ffffff;
+}
+
+[data-theme="dark"] .statusAction svg circle {
+  fill: #ffffff;
+}

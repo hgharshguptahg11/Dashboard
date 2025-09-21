@@ -1,0 +1,121 @@
+/* Pagination Component Styles */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 244px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.navButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.navButton:active:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.navButton:disabled svg path {
+  fill: #9ca3af;
+}
+
+.pageButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #1c1c1c;
+  user-select: none;
+}
+
+.pageButton:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.pageButton.active {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.pageButton.active:hover {
+  background-color: #374151;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .navButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .navButton:active:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .navButton:disabled svg path {
+  fill: #6b7280;
+}
+
+[data-theme="dark"] .pageButton {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .pageButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .pageButton.active {
+  background-color: #f9fafb;
+  color: #1c1c1c;
+}
+
+[data-theme="dark"] .pageButton.active:hover {
+  background-color: #e5e7eb;
+}
+
+[data-theme="dark"] .navButton svg path {
+  fill: #f9fafb;
+}

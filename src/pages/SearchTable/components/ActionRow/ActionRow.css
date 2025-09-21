@@ -1,0 +1,131 @@
+/* ActionRow Component Styles */
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1172px;
+  height: 44px;
+  background: #f7f9fb;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.actionRowGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.actionButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.actionButton:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.searchField {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.searchField .MuiOutlinedInput-root {
+  width: 192px;
+  height: 28px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.searchField .MuiOutlinedInput-root:hover {
+  border-color: #d1d5db;
+}
+
+.searchField .MuiOutlinedInput-root.Mui-focused {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.searchField .MuiOutlinedInput-input {
+  padding: 6px 8px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1c1c1c;
+}
+
+.searchField .MuiOutlinedInput-input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.searchField .MuiInputAdornment-root {
+  margin-right: 8px;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .actionRow {
+  background: #1f2937;
+}
+
+[data-theme="dark"] .actionButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .actionButton:active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .searchField .MuiOutlinedInput-root {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .searchField .MuiOutlinedInput-root:hover {
+  border-color: #6b7280;
+}
+
+[data-theme="dark"] .searchField .MuiOutlinedInput-root.Mui-focused {
+  border-color: #3b82f6;
+}
+
+[data-theme="dark"] .searchField .MuiOutlinedInput-input {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .searchField .MuiOutlinedInput-input::placeholder {
+  color: #9ca3af;
+}

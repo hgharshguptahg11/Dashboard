@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Overview from "../../pages/Overview";
+import SearchTable from "../../pages/SearchTable";
 import Header from "../Header";
 
 // Import page components
@@ -10,6 +11,8 @@ const RightPanel = ({ selectedPage }) => {
     switch (selectedPage) {
       case "overview":
         return <Overview />;
+      case "ecommerce":
+        return <SearchTable />;
       default:
         return <Overview />;
     }
