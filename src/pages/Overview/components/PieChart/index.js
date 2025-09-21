@@ -74,7 +74,6 @@ const PieChart = () => {
                 }`}
                 onMouseEnter={(e) => {
                   setHoveredSegment(segment.id);
-                  const rect = e.currentTarget.getBoundingClientRect();
                   const containerRect = e.currentTarget.closest('.pie-chart-container').getBoundingClientRect();
                   setMousePosition({
                     x: e.clientX - containerRect.left,

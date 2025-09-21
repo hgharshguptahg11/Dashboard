@@ -4,13 +4,10 @@ import {
     List,
     ListItem,
     ListItemButton,
-    ListItemIcon,
-    ListItemText,
     Typography,
     Collapse
 } from '@mui/material';
 import {
-    ExpandLess,
     ExpandMore,
     ChevronRight
 } from '@mui/icons-material';

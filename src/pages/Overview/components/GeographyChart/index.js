@@ -61,9 +61,6 @@ const GeographyChart = () => {
                   {({ geographies }) =>
                     geographies.map((geo) => {
                       const countryName = geo.properties.NAME;
-                      const countryData = geographyData.find(
-                        (item) => item.country === countryName
-                      );
                       const fillColor = "#A8C5DA";
 
                       return (
