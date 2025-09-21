@@ -104,8 +104,21 @@
   flex-grow: 0;
 }
 
+/* Icon Set for sidebar icon - larger container */
+.group .icon-set {
+  width: 32px;
+  height: 32px;
+}
+
 /* Icons */
-.sidebar-icon,
+.sidebar-icon {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .star-icon,
 .sun-icon,
 .clock-icon,
@@ -116,11 +129,29 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .search-icon {
   width: 16px;
   height: 16px;
+  object-fit: contain;
+}
+
+.sun-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.bell-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Reduce size of the menu icon after bell */
+.action-group .sidebar-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Light Theme Icon Colors */
@@ -128,8 +159,7 @@
 .header.light .star-icon,
 .header.light .sun-icon,
 .header.light .clock-icon,
-.header.light .bell-icon,
-.header.light .search-icon {
+.header.light .bell-icon {
   color: #1c1c1c;
 }
 
@@ -138,8 +168,7 @@
 .header.dark .star-icon,
 .header.dark .sun-icon,
 .header.dark .clock-icon,
-.header.dark .bell-icon,
-.header.dark .search-icon {
+.header.dark .bell-icon {
   color: #ffffff;
 }
 
@@ -225,6 +254,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 4px;
   font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
   color: rgba(28, 28, 28, 0.2);
   flex: none;

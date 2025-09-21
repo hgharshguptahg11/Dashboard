@@ -140,6 +140,16 @@
   justify-content: center;
 }
 
+/* Notification Icon Image */
+.notification-icon-image {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 /* Notification Content */
 .notification-content {
   display: flex;
@@ -170,6 +180,9 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Dark Theme Notification Title */
@@ -243,6 +256,17 @@
   background: #f0f0f0;
 }
 
+/* Activity Avatar Image */
+.activity-avatar-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 /* Activity Content */
 .activity-content {
   display: flex;
@@ -273,6 +297,9 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Dark Theme Activity Title */
@@ -335,6 +362,17 @@
   flex-grow: 0;
 }
 
+/* Contact Avatar Image */
+.contact-avatar-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 /* Contact Name */
 .contact-name {
   width: 80px;
@@ -349,6 +387,8 @@
   flex: none;
   order: 1;
   flex-grow: 0;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Dark Theme Contact Name */

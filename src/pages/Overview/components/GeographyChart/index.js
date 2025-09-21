@@ -4,7 +4,6 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  ZoomableGroup,
   Marker,
 } from "react-simple-maps";
 import "./GeographyChart.css";
@@ -36,20 +35,12 @@ const GeographyChart = () => {
   const geoUrl =
     "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-  const handleCountryClick = (geo) => {
-    const countryName = geo.properties.NAME;
-    const countryData = geographyData.find(
-      (item) => item.country === countryName
-    );
-    // Handle country click if needed
-    console.log("Country clicked:", countryName, countryData);
-  };
 
   return (
     <div className={`geography-chart ${isDarkMode ? "dark" : "light"}`}>
       {/* Header */}
       <div className="geography-header">
-        <h3 className="geography-title">Geography Based Traffic</h3>
+        <h3 className="geography-title">Revenue by Location</h3>
       </div>
 
       {/* Chart Area */}
@@ -60,13 +51,12 @@ const GeographyChart = () => {
             <ComposableMap
               projection="geoMercator"
               projectionConfig={{
-                scale: 80,
-                center: [0, 0],
+                scale: 25,
+                center: [0, 12],
               }}
               width={154}
-              height={120}
+              height={90}
             >
-              <ZoomableGroup>
                 <Geographies geography={geoUrl}>
                   {({ geographies }) =>
                     geographies.map((geo) => {
@@ -74,11 +64,7 @@ const GeographyChart = () => {
                       const countryData = geographyData.find(
                         (item) => item.country === countryName
                       );
-                      const fillColor = countryData
-                        ? countryData.color
-                        : isDarkMode
-                        ? "rgba(255, 255, 255, 0.1)"
-                        : "rgba(28, 28, 28, 0.1)";
+                      const fillColor = "#A8C5DA";
 
                       return (
                         <Geography
@@ -94,28 +80,7 @@ const GeographyChart = () => {
                               strokeWidth: 0.5,
                               outline: "none",
                             },
-                            hover: {
-                              fill: countryData
-                                ? countryData.color
-                                : isDarkMode
-                                ? "rgba(255, 255, 255, 0.2)"
-                                : "rgba(28, 28, 28, 0.2)",
-                              stroke: isDarkMode ? "#ffffff" : "#1c1c1c",
-                              strokeWidth: 1,
-                              outline: "none",
-                            },
-                            pressed: {
-                              fill: countryData
-                                ? countryData.color
-                                : isDarkMode
-                                ? "rgba(255, 255, 255, 0.3)"
-                                : "rgba(28, 28, 28, 0.3)",
-                              stroke: isDarkMode ? "#ffffff" : "#1c1c1c",
-                              strokeWidth: 1,
-                              outline: "none",
-                            },
                           }}
-                          onClick={() => handleCountryClick(geo)}
                         />
                       );
                     })
@@ -125,14 +90,13 @@ const GeographyChart = () => {
                 {plotPoints.map((point, index) => (
                   <Marker key={index} coordinates={point.coordinates}>
                     <circle
-                      r={3}
+                      r={4}
                       fill="#1C1C1C"
-                      stroke="#1C1C1C"
-                      strokeWidth={1}
+                      stroke="#ffffff"
+                      strokeWidth={2}
                     />
                   </Marker>
                 ))}
-              </ZoomableGroup>
             </ComposableMap>
           </div>
         </div>
@@ -142,12 +106,16 @@ const GeographyChart = () => {
       <div className="geography-legend">
         {plotPoints.map((point, index) => (
           <div key={index} className="geography-legend-item">
-            <div
-              className="legend-color"
-              style={{ backgroundColor: "#1C1C1C" }}
-            />
-            <span className="legend-country">{point.name}</span>
-            <span className="legend-value">{point.value}K</span>
+            <div className="legend-content">
+              <span className="legend-country">{point.name}</span>
+              <span className="legend-value">{point.value}K</span>
+            </div>
+            <div className="legend-progress-bar">
+              <div 
+                className="legend-progress-fill"
+                style={{ width: `${(point.value / 72) * 100}%` }}
+              ></div>
+            </div>
           </div>
         ))}
       </div>

@@ -1,7 +1,8 @@
-/* PagesSection Styles - Updated to match Figma specifications */
+/* PagesSection Styles - Updated to match Figma specifications exactly */
 
 /* Frame */
 .sectionContainer {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,7 +18,8 @@
 }
 
 /* Text */
-.sectionTitle {
+.pagesectiontitle {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,14 +33,19 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  /* Text styling */
+}
+
+.pagesectiontitletext {
+  /* Text */
   width: 156px;
   height: 20px;
+  /* 16 Regular */
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
+  /* identical to box height, or 143% */
   font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
   color: rgba(28, 28, 28, 0.4);
   /* Inside auto layout */
@@ -58,13 +65,14 @@
 
 /* Content */
 .listItemButton {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   align-content: flex-start;
-  padding: 4px 8px 4px 0px;
-  gap: 4px;
+  padding: 4px 4px 4px 12px;
+  gap: 0px;
   width: 180px;
   height: 28px;
   border-radius: 8px;
@@ -74,6 +82,8 @@
   align-self: stretch;
   flex-grow: 0;
   transition: background-color 0.2s;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .listItemButton:hover {
@@ -82,15 +92,30 @@
 
 .listItemButton.selected {
   background-color: #f5f5f5;
-  border-left: 3px solid #1976d2;
 }
 
-.listItemButton.selected:hover {
-  background-color: #f0f0f0;
+/* Group */
+.listItemGroup {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  row-gap: 0px;
+  width: 24px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* IconSet */
-.listItemIcon {
+.listItemIconSet {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -103,11 +128,68 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  color: #666;
+  margin: 0px;
+}
+
+/* Expand/Collapse Icon */
+.expandIcon {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: rgba(28, 28, 28, 0.2);
+  cursor: pointer;
+}
+
+/* IconText */
+.listItemIconText {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 0px;
+  width: 144px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* IconSet for main items */
+.listItemIcon {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 /* Text */
 .listItemText {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,14 +202,20 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  /* Text styling */
+  overflow: hidden;
+}
+
+.listItemLabel {
+  /* Text */
   width: 78px;
   height: 20px;
+  /* 12 Regular */
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
+  /* identical to box height, or 143% */
   font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
   color: #1C1C1C;
   /* Inside auto layout */
@@ -135,11 +223,30 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.listItemText.primary {
-  font-size: 14px;
-  color: #1C1C1C;
+/* Specific widths for different labels based on Figma */
+.listItemLabel.user-profile {
+  width: 78px;
+}
+
+.listItemLabel.account {
+  width: 63px;
+}
+
+.listItemLabel.corporate {
+  width: 54px;
+}
+
+.listItemLabel.blog {
+  width: 76px;
+}
+
+.listItemLabel.social {
+  width: 63px;
 }
 
 /* ArrowLineRight */
@@ -152,28 +259,22 @@
   flex-grow: 0;
   color: rgba(28, 28, 28, 0.2);
   flex-shrink: 0;
-  margin-left: auto;
-}
-
-.expandIcon {
-  color: rgba(28, 28, 28, 0.2);
-  flex-shrink: 0;
-  margin-left: auto;
 }
 
 .submenuContainer {
   padding-left: 0;
 }
 
-/* Content */
+/* Content for submenu items */
 .submenuItem {
+  /* Auto layout */
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   align-content: flex-start;
-  padding: 4px 8px 4px 0px;
-  gap: 4px;
+  padding: 4px 4px 4px 12px;
+  gap: 0px;
   width: 180px;
   height: 28px;
   border-radius: 8px;
@@ -182,6 +283,7 @@
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .submenuItem:hover {
@@ -196,27 +298,32 @@
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Text */
+/* Text for submenu items - smaller font size */
 .submenuText {
+  /* Auto layout */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-  width: 78px;
+  width: auto;
   height: 20px;
   border-radius: 8px;
   /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
-  /* Text styling */
-  width: 78px;
+}
+
+.submenuLabel {
+  /* Text - smaller font size for subheadings */
+  width: auto;
   height: 20px;
+  /* 12 Regular */
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
   color: #1C1C1C;
@@ -225,4 +332,25 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+
+/* Specific widths for submenu labels */
+.submenuLabel.overview {
+  width: 55px;
+}
+
+.submenuLabel.projects {
+  width: 55px;
+}
+
+.submenuLabel.campaigns {
+  width: 68px;
+}
+
+.submenuLabel.documents {
+  width: 68px;
+}
+
+.submenuLabel.followers {
+  width: 68px;
 }

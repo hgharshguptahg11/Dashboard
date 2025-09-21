@@ -1,9 +1,0 @@
-1. heading->Total Sales
-2.piechart
-    it has 4 porions of pie chart named subtract 
-    each subtract has a toopltip appearing ver it when the subtarct is hovered over
-3. card
-    has 4 rows of content
-        has tag container on left and amount text on right
-        tag container has dot and tag text
-

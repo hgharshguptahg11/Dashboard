@@ -89,7 +89,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 30px;
   text-align: right;
   font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
   color: rgba(28, 28, 28, 0.4);
@@ -212,10 +212,8 @@
 .vertical-bars {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
   padding: 0px 0px 28px;
-  gap: 8px;
   position: absolute;
   left: 0%;
   right: 0%;
@@ -233,7 +231,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding: 0px 16px 0px;
+  padding: 0px 12px 0px;
   width: 57px;
   height: 140px;
   flex: none;
@@ -349,8 +347,8 @@
 .bar-container::after {
   content: attr(data-value);
   position: absolute;
-  top: -30px;
-  left: 50%;
+  top: 8.5px;
+  left: 45%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.8);
   color: white;
@@ -361,6 +359,7 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 10;
+  white-space: nowrap;
 }
 
 .bar-chart.dark .bar-container::after {

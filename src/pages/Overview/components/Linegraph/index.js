@@ -38,11 +38,11 @@ const Linegraph = () => {
         </div>
         <div className="linegraph-legend">
           <div className="legend-item">
-            <div className="legend-line current-week"></div>
+            <div className="legend-dot current-week"></div>
             <span className="legend-text">Current Week $58,211</span>
           </div>
           <div className="legend-item">
-            <div className="legend-line previous-week"></div>
+            <div className="legend-dot previous-week"></div>
             <span className="legend-text">Previous Week $68,768</span>
           </div>
         </div>
