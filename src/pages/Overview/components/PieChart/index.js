@@ -5,6 +5,7 @@ import "./PieChart.css";
 const PieChart = () => {
   const { isDarkMode } = useTheme();
   const [hoveredSegment, setHoveredSegment] = useState(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Sample data for the pie chart - using exact colors from svgForpiechartPortions.txt
   const pieData = [
@@ -71,7 +72,22 @@ const PieChart = () => {
                 className={`pie-segment ${
                   hoveredSegment === segment.id ? "hovered" : ""
                 }`}
-                onMouseEnter={() => setHoveredSegment(segment.id)}
+                onMouseEnter={(e) => {
+                  setHoveredSegment(segment.id);
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const containerRect = e.currentTarget.closest('.pie-chart-container').getBoundingClientRect();
+                  setMousePosition({
+                    x: e.clientX - containerRect.left,
+                    y: e.clientY - containerRect.top
+                  });
+                }}
+                onMouseMove={(e) => {
+                  const containerRect = e.currentTarget.closest('.pie-chart-container').getBoundingClientRect();
+                  setMousePosition({
+                    x: e.clientX - containerRect.left,
+                    y: e.clientY - containerRect.top
+                  });
+                }}
                 onMouseLeave={() => setHoveredSegment(null)}
                 style={{
                   cursor: "pointer",
@@ -108,17 +124,14 @@ const PieChart = () => {
 
       {/* Tooltip */}
       {hoveredSegment && (
-        <div className="pie-chart-tooltip">
+        <div 
+          className="pie-chart-tooltip"
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
+          }}
+        >
           <div className="tooltip-content">
-            <div className="tooltip-label">
-              {pieData.find((item) => item.id === hoveredSegment)?.label}
-            </div>
-            <div className="tooltip-value">
-              $
-              {pieData
-                .find((item) => item.id === hoveredSegment)
-                ?.value.toFixed(2)}
-            </div>
             <div className="tooltip-percentage">
               {pieData.find((item) => item.id === hoveredSegment)?.percentage}%
             </div>

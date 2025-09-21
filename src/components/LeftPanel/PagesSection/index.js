@@ -49,9 +49,11 @@ const PagesSection = ({ onPageChange, selectedPage }) => {
 
     return (
         <Box className="sectionContainer">
-            <Typography variant="caption" className="sectionTitle">
-                Pages
-            </Typography>
+            <Box className="pagesectiontitle">
+                <Typography variant="caption" className="pagesectiontitletext">
+                    Pages
+                </Typography>
+            </Box>
             <List dense className="listContainer">
                 {/* User Profile with submenu */}
                 <ListItem disablePadding className="listItem">
@@ -59,18 +61,25 @@ const PagesSection = ({ onPageChange, selectedPage }) => {
                             onClick={handleUserProfileToggle}
                             className="listItemButton"
                         >
-                            <ListItemIcon className="listItemIcon">
-                                <img 
-                                    src={UserProfileIcon} 
-                                    alt="User Profile"
-                                    style={{ width: '20px', height: '20px' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary="User Profile"
-                                className="listItemText"
-                            />
-                            {userProfileExpanded ? <ExpandLess className="expandIcon" /> : <ExpandMore className="expandIcon" />}
+                            <Box className="listItemGroup">
+                                <Box className="listItemIconSet">
+                                    {userProfileExpanded ? <ExpandMore className="expandIcon" /> : <ChevronRight className="expandIcon" />}
+                                </Box>
+                            </Box>
+                            <Box className="listItemIconText">
+                                <Box className="listItemIcon">
+                                    <img 
+                                        src={UserProfileIcon} 
+                                        alt="User Profile"
+                                        style={{ width: '20px', height: '20px' }}
+                                    />
+                                </Box>
+                                <Box className="listItemText">
+                                    <Typography className="listItemLabel user-profile">
+                                        User Profile
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </ListItemButton>
                 </ListItem>
                 <Collapse in={userProfileExpanded} timeout="auto" unmountOnExit>
@@ -82,10 +91,11 @@ const PagesSection = ({ onPageChange, selectedPage }) => {
                                     selected={selectedPage === item.id}
                                     className={`submenuItem ${selectedPage === item.id ? 'selected' : ''}`}
                                 >
-                                    <ListItemText
-                                        primary={item.label}
-                                        className="submenuText"
-                                    />
+                                    <Box className="submenuText">
+                                        <Typography className={`submenuLabel ${item.label.toLowerCase()}`}>
+                                            {item.label}
+                                        </Typography>
+                                    </Box>
                                 </ListItemButton>
                             </ListItem>
                         ))}
@@ -100,20 +110,27 @@ const PagesSection = ({ onPageChange, selectedPage }) => {
                             selected={selectedPage === item.id}
                             className={`listItemButton ${selectedPage === item.id ? 'selected' : ''}`}
                         >
-                            <ListItemIcon className="listItemIcon">
-                                <img 
-                                    src={item.icon} 
-                                    alt={item.label}
-                                    style={{ width: '20px', height: '20px' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={item.label}
-                                className="listItemText"
-                            />
-                            {item.hasSubmenu && (
-                                <ChevronRight className="chevronIcon" />
-                            )}
+                            <Box className="listItemGroup">
+                                <Box className="listItemIconSet">
+                                    {item.hasSubmenu && (
+                                        <ChevronRight className="chevronIcon" />
+                                    )}
+                                </Box>
+                            </Box>
+                            <Box className="listItemIconText">
+                                <Box className="listItemIcon">
+                                    <img 
+                                        src={item.icon} 
+                                        alt={item.label}
+                                        style={{ width: '20px', height: '20px' }}
+                                    />
+                                </Box>
+                                <Box className="listItemText">
+                                    <Typography className={`listItemLabel ${item.label.toLowerCase()}`}>
+                                        {item.label}
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </ListItemButton>
                     </ListItem>
                 ))}

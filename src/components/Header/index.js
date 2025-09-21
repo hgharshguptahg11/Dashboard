@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
+import searchIcon from "../../assets/searchIcon.png";
 import "./Header.css";
 
 const Header = () => {
@@ -25,8 +26,8 @@ const Header = () => {
             <div className="icon-set">
               <svg
                 className="sidebar-icon"
-                width="28"
-                height="28"
+                width="32"
+                height="32"
                 viewBox="0 0 28 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,27 +86,11 @@ const Header = () => {
           <div className="search">
             <div className="icon-text">
               <div className="icon-set">
-                <svg
+                <img
+                  src={searchIcon}
+                  alt="Search"
                   className="search-icon"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <circle
-                    cx="7"
-                    cy="7"
-                    r="6"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="m13 13-3-3"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                />
               </div>
               <input
                 type="text"

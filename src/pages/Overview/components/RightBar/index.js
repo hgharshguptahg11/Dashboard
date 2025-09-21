@@ -1,5 +1,19 @@
 import React from "react";
 import { useTheme } from "../../../../contexts/ThemeContext";
+import image1 from "../../../../assets/image1.png";
+import image2 from "../../../../assets/image2.png";
+import image3 from "../../../../assets/image3.png";
+import image4 from "../../../../assets/image4.png";
+import image5 from "../../../../assets/image5.png";
+import image6 from "../../../../assets/image6.png";
+import image7 from "../../../../assets/image7.png";
+import image8 from "../../../../assets/image8.png";
+import image9 from "../../../../assets/image9.png";
+import image10 from "../../../../assets/image10.png";
+import image11 from "../../../../assets/image11.png";
+import bugIcon from "../../../../assets/bug.png";
+import profileIcon from "../../../../assets/profile.png";
+import alarmIcon from "../../../../assets/alarm.png";
 import "./RightBar.css";
 
 const RightBar = () => {
@@ -9,25 +23,25 @@ const RightBar = () => {
   const notifications = [
     {
       id: 1,
-      icon: "🐛",
+      icon: bugIcon,
       title: "You have a bug that needs to be fixed",
       time: "Just now",
     },
     {
       id: 2,
-      icon: "👤",
+      icon: profileIcon,
       title: "New user registered",
       time: "59 minutes ago",
     },
     {
       id: 3,
-      icon: "🐛",
+      icon: bugIcon,
       title: "You have a bug that needs to be fixed",
       time: "12 hours ago",
     },
     {
       id: 4,
-      icon: "📢",
+      icon: alarmIcon,
       title: "Andi Lane subscribed to you",
       time: "Today, 11:59 AM",
     },
@@ -37,31 +51,31 @@ const RightBar = () => {
   const activities = [
     {
       id: 1,
-      avatar: "👤",
+      avatar: image7,
       title: "You have a bug that needs to be fixed",
       time: "Just now",
     },
     {
       id: 2,
-      avatar: "👤",
+      avatar: image8,
       title: "Released a new version",
       time: "59 minutes ago",
     },
     {
       id: 3,
-      avatar: "👤",
+      avatar: image9,
       title: "Submitted a bug",
       time: "12 hours ago",
     },
     {
       id: 4,
-      avatar: "👤",
+      avatar: image10,
       title: "Modified A data in Page X",
       time: "Today, 11:59 AM",
     },
     {
       id: 5,
-      avatar: "👤",
+      avatar: image11,
       title: "Deleted a page in Project X",
       time: "Feb 2, 2023",
     },
@@ -69,12 +83,12 @@ const RightBar = () => {
 
   // Sample data for contacts
   const contacts = [
-    { id: 1, name: "Natali Craig", avatar: "👩" },
-    { id: 2, name: "Drew Cano", avatar: "👨" },
-    { id: 3, name: "Orlando Diggs", avatar: "👨" },
-    { id: 4, name: "Andi Lane", avatar: "👩" },
-    { id: 5, name: "Kate Morrison", avatar: "👩" },
-    { id: 6, name: "Koray Okumus", avatar: "👨" },
+    { id: 1, name: "Natali Craig", avatar: image1 },
+    { id: 2, name: "Drew Cano", avatar: image2 },
+    { id: 3, name: "Orlando Diggs", avatar: image3 },
+    { id: 4, name: "Andi Lane", avatar: image4 },
+    { id: 5, name: "Kate Morrison", avatar: image5 },
+    { id: 6, name: "Koray Okumus", avatar: image6 },
   ];
 
   return (
@@ -88,7 +102,11 @@ const RightBar = () => {
           {notifications.map((notification) => (
             <div key={notification.id} className="notification-item">
               <div className="notification-icon">
-                <span className="icon-text">{notification.icon}</span>
+                <img 
+                  src={notification.icon} 
+                  alt="Notification"
+                  className="notification-icon-image"
+                />
               </div>
               <div className="notification-content">
                 <div className="notification-title">{notification.title}</div>
@@ -108,7 +126,11 @@ const RightBar = () => {
           {activities.map((activity) => (
             <div key={activity.id} className="activity-item">
               <div className="activity-avatar">
-                <span className="avatar-text">{activity.avatar}</span>
+                <img 
+                  src={activity.avatar} 
+                  alt="Activity"
+                  className="activity-avatar-image"
+                />
               </div>
               <div className="activity-content">
                 <div className="activity-title">{activity.title}</div>
@@ -128,7 +150,11 @@ const RightBar = () => {
           {contacts.map((contact) => (
             <div key={contact.id} className="contact-item">
               <div className="contact-avatar">
-                <span className="avatar-text">{contact.avatar}</span>
+                <img 
+                  src={contact.avatar} 
+                  alt={contact.name}
+                  className="contact-avatar-image"
+                />
               </div>
               <div className="contact-name">{contact.name}</div>
             </div>

@@ -7,15 +7,15 @@ const BarChart = () => {
   const [hoveredBar, setHoveredBar] = useState(null);
 
   const chartData = [
-    { label: "1", value: 90, height: 90 },
-    { label: "2", value: 110, height: 110 },
-    { label: "3", value: 95, height: 95 },
-    { label: "4", value: 120, height: 120 },
-    { label: "5", value: 80, height: 80 },
-    { label: "6", value: 110, height: 110 },
+    { label: "Jan", value: 90, height: 90 },
+    { label: "Feb", value: 110, height: 110 },
+    { label: "Mar", value: 95, height: 95 },
+    { label: "Apr", value: 120, height: 120 },
+    { label: "May", value: 80, height: 80 },
+    { label: "Jun", value: 110, height: 110 },
   ];
 
-  const yAxisLabels = ["4", "3", "2", "1"];
+  const yAxisLabels = ["30M", "20M", "10M", "0"];
 
   const handleBarHover = (index) => {
     setHoveredBar(index);
@@ -27,7 +27,7 @@ const BarChart = () => {
 
   return (
     <div className={`bar-chart ${isDarkMode ? "dark" : "light"}`}>
-      <div className="chart-title">Revenue Overview</div>
+      <div className="chart-title">Projections vs Actuals</div>
       <div className="chart-container">
         <div className="chart">
           <div className="left-text">

@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
-  gap: 16px;
+  gap: 4px;
   width: 202px;
   min-width: 200px;
   max-width: 272px;
@@ -17,6 +17,7 @@
   order: 3;
   flex-grow: 1;
   transition: all 0.3s ease;
+  margin-bottom: 16px;
 }
 
 /* Dark Theme */
@@ -29,7 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   width: 154px;
   height: 20px;
@@ -65,7 +66,7 @@
 .geography-chart-area {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   width: 154px;
   height: 120px;
@@ -151,7 +152,7 @@
 .geography-legend {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
   gap: 8px;
   width: 154px;
@@ -167,12 +168,12 @@
 /* Legend Item */
 .geography-legend-item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0px;
-  gap: 8px;
+  gap: 4px;
   width: 154px;
-  height: 16px;
+  height: 24px;
   border-radius: 4px;
   flex: none;
   order: 0;
@@ -180,11 +181,48 @@
   flex-grow: 0;
 }
 
+/* Legend Content */
+.legend-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 8px;
+  width: 154px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Legend Progress Bar */
+.legend-progress-bar {
+  width: 154px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 0.5px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  overflow: hidden;
+}
+
+/* Legend Progress Fill */
+.legend-progress-fill {
+  height: 100%;
+  background: #A8C5DA;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
 /* Legend Color */
 .legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 0px;
+  background: #1C1C1C;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -202,6 +240,7 @@
   flex: none;
   order: 1;
   flex-grow: 1;
+  text-align: left;
 }
 
 /* Dark Theme Legend Country */
@@ -213,7 +252,7 @@
 .legend-value {
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   font-feature-settings: "ss01" on, "cv01" on, "cv11" on;
@@ -221,11 +260,22 @@
   flex: none;
   order: 2;
   flex-grow: 0;
+  text-align: right;
 }
 
 /* Dark Theme Legend Value */
 .geography-chart.dark .legend-value {
   color: #ffffff;
+}
+
+/* Dark Theme Legend Progress Bar */
+.geography-chart.dark .legend-progress-bar {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Theme Legend Progress Fill */
+.geography-chart.dark .legend-progress-fill {
+  background: #A8C5DA;
 }
 
 /* Summary */
